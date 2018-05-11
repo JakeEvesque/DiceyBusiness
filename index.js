@@ -9,10 +9,8 @@ class Die {
             this.roll();
         });
         this.div.addEventListener("dblclick", () => {
-            console.log("Hello: " + dice.length);
             for(var i = dice.length-1; i >= 0; i--){
                 if (dice[i] == this){
-                    console.log("Popping: " + i);
                     dice.splice(i,1);
                     diceDiv.removeChild(this.div);
                     break;
@@ -21,8 +19,7 @@ class Die {
         });
 
         this.roll();
-        diceDiv.appendChild(this.div);
-        
+        diceDiv.appendChild(this.div);        
     }
 
     roll() {
